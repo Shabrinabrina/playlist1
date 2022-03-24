@@ -1,16 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { component } from 'react';
-import SearchBar from './feature/SearchBar';
-import ContainerSong from './feature/Song';
-
+import React, { Component } from 'react';
+import BigData from './Page/BigData';
 
 function App() {
   return (
-    <div className="APP">
-      <SearchBar/>
-      <ContainerSong/>
-      <button class="btnsSelect">Select</button>
+    <div className="App">
+      <BigData/>
     </div>
   );
 }

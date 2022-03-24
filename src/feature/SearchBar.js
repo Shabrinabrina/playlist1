@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-const SearchBar = () => {
-    return(
-        <from action="/search">
-        <input placeholder="Search" required/>
-        <button type="submit">Search</button>    
+// const SearchBar = () => {
+//     return(
+//         <from action="/search">
+//         <input placeholder="Search" required/>
+//         <button type="submit">Search</button>    
         
-        </from>
-        )
-};
-export default SearchBar;
+//         </from>
+//         )
+// };
+// export default SearchBar;
