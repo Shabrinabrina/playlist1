@@ -57,7 +57,7 @@ p {
 }
 
 
-.cardPlaylist {
+.card-playlist {
   width: 250px;
   border-radius: 8px;
   border: 2px solid #FBD6D2;
@@ -65,13 +65,13 @@ p {
   background-color: #F190B7;
   margin-top: 30px;
 }
-.cardPlaylist img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.card-playlist img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
 }
 
-.cardPlaylist h3 {
+.card-playlist h3 {
   font-weight: 600;
   min-height: 58px;
 }
@@ -82,6 +82,20 @@ p {
 
 .btn-select {
   width: 100%;
-  cursor: pointer;
   margin-top: 10px;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.btn-text {
+  color: #5b7db1;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 12px 0;
 }
