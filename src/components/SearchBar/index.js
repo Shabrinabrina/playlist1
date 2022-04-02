@@ -38,7 +38,7 @@ export default function SearchBar({ accessToken, onSuccess, onClearSearch }) {
 
   return (
     <div className="search-wrapper">
-      <form className="form-search" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">
           <input
             type="text"
@@ -48,7 +48,7 @@ export default function SearchBar({ accessToken, onSuccess, onClearSearch }) {
             required
             value={text}
           />
-          <input type="submit" className="btn btn-primary" value="Search" />
+          <button className="btn btn-primary">Search</button>
         </div>
       </form>
       <button className="btn btn-text" onClick={clearSearch}>

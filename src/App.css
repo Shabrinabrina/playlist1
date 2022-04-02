@@ -1,53 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  background-color: #f6f8fd;
+  background-color: #FBD6D2;
   font-family: "Poppins", sans-serif;
 }
 
 .container {
-  padding: 20px;
+  padding: 10px 20px 20px;
 }
 
 .container h1 
 p {
   margin: 12px 0;
-  text-align: center;
 }
 
-.login-app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-search .form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 12px;
-  margin: 30px 0;
-}
-
-.form-search input {
+.form input,
+textarea {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 8px 16px;
-  font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
-.btn-primary {
+.btn {
   padding: 8px 16px;
   border: 0;
   border-radius: 5px;
-  background-color: #5b7db1;
-  color: white;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
   cursor: pointer;
   text-decoration: none;
 }
 
+.btn-primary {
+  background-color: #F190B7;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #F190B7;
+  color: #F190B7;
+  font-weight: 500;
+}
+
+.btn-text {
+  color: #F190B7;
+  background-color: transparent;
+  padding: 0;
+  margin: 12px 0;
+}
+
+hr {
+  border: 1px solid #b7cadb;
+  margin: 30px 0;
+}
+
+/* Form Create Playlist */
+.form-playlist .form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 500px;
+}
+
+.form-playlist .form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-playlist textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Search Playlist */
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.search-wrapper .form .form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.search-wrapper input {
+  width: 100%;
+}
+
+/* Card Track Playlist */
 .track-list {
   display: grid;
   justify-items: center;
@@ -56,19 +100,18 @@ p {
   margin: 20px 0;
 }
 
-
 .card-playlist {
   width: 250px;
   border-radius: 8px;
-  border: 2px solid #FBD6D2;
+  border: 2px solid #b7cadb;
   padding: 14px;
-  background-color: #F190B7;
-  margin-top: 30px;
+  background-color: white;
 }
+
 .card-playlist img {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .card-playlist h3 {
@@ -76,26 +119,7 @@ p {
   min-height: 58px;
 }
 
-.card-playlist p {
-  text-align: left;
-}
-
 .btn-select {
   width: 100%;
   margin-top: 10px;
-}
-
-.search-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 20px 0;
-}
-
-.btn-text {
-  color: #5b7db1;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 12px 0;
 }
