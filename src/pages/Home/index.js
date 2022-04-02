@@ -96,7 +96,7 @@ export default function Home() {
 
       {isAuthorized && (
         <>
-          <h1>Musify</h1>
+          <h1>Music Homework</h1>
           <FormPlaylist
             accessToken={accessToken}
             userId={user.id}
