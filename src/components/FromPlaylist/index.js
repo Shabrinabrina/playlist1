@@ -1,42 +1,53 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux"; 
 import { addTracksToPlaylist, createPlaylist } from "../../utils/fetchApi";
 
-export default function FormPlaylist({ accessToken, userId, uris }) {
+export default function FormPlaylist({ uris }) {
   const [playlist, setPlaylist] = useState({
-    title: "",
-    description: "",
+      title: "",
+      description: "",
   });
+  const accessToken = useSelector((state) => state.auth.accessToken);
+  const userId = useSelector((state) => state.auth.user.id);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+      const { name, value } = e.target;
 
-    setPlaylist({ ...playlist, [name]: value });
+      setPlaylist({ ...playlist, [name]: value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+      e.preventDefault();
 
-    if (playlist.title.length > 10) {
-      try {
-        const responsePlaylist = await createPlaylist(accessToken, userId, {
-          name: playlist.title,
-          description: playlist.description,
-        });
+      if (playlist.title.length > 10) {
+          try {
+              const responsePlaylist = await createPlaylist(
+                  accessToken,
+                  userId,
+                  {
+                      name: playlist.title,
+                      description: playlist.description,
+                  }
+              );
 
-        await addTracksToPlaylist(accessToken, responsePlaylist.id, uris);
+              await addTracksToPlaylist(
+                  accessToken,
+                  responsePlaylist.id,
+                  uris
+              );
 
-        setPlaylist({
-          title: "",
-          description: "",
-        });
+              setPlaylist({
+                  title: "",
+                  description: "",
+              });
 
-        alert("Playlist created successfully!");
-      } catch (e) {
-        alert(e);
+              alert("Playlist created successfully!");
+          } catch (e) {
+              alert(e);
+          }
+      } else {
+          alert("Title must be at least 10 characters long.");
       }
-    } else {
-      alert("Title must be at least 10 characters long.");
-    }
   };
 
   return (
@@ -55,19 +66,19 @@ export default function FormPlaylist({ accessToken, userId, uris }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="desc">Description</label>
-          <textarea
-            id="desc"
-            name="description"
-            value={playlist.description}
-            onChange={handleChange}
-            required
-          ></textarea>
+                    <label htmlFor="desc">Description</label>
+                    <textarea
+                        id="desc"
+                        name="description"
+                        value={playlist.description}
+                        onChange={handleChange}
+                        required
+                    ></textarea>
+                </div>
+                <button className="btn btn-primary" type="submit">
+                    Submit
+                </button>
+            </form>
         </div>
-        <button className="btn btn-primary" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
-  );
-}
+   );
+} 
