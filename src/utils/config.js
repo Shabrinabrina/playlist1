@@ -3,6 +3,6 @@ const config = {
     SPOTIFY_SCOPE: "playlist-modify-private",
     RESPONSE_TYPE: "token",
     REDIRECT_URI: "http://localhost:3000",
-};
-  
-export default config;
+    };
+    
+    export default config;

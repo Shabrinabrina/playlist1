@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux"; 
 import { addTracksToPlaylist, createPlaylist } from "../../utils/fetchApi";
+import { useSelector } from "react-redux";
 
 export default function FormPlaylist({ uris }) {
   const [playlist, setPlaylist] = useState({
@@ -51,34 +51,34 @@ export default function FormPlaylist({ uris }) {
   };
 
   return (
-    <div className="form-playlist">
-      <h3>Create Playlist</h3>
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            value={playlist.title}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-                    <label htmlFor="desc">Description</label>
-                    <textarea
-                        id="desc"
-                        name="description"
-                        value={playlist.description}
-                        onChange={handleChange}
-                        required
-                    ></textarea>
-                </div>
-                <button className="btn btn-primary" type="submit">
-                    Submit
-                </button>
-            </form>
-        </div>
-   );
-} 
+      <div className="form-playlist">
+          <h3>Create Playlist</h3>
+          <form className="form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                  <label htmlFor="title">Title</label>
+                  <input
+                      type="text"
+                      name="title"
+                      id="title"
+                      value={playlist.title}
+                      onChange={handleChange}
+                      required
+                  />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="desc">Description</label>
+                  <textarea
+                      id="desc"
+                      name="description"
+                      value={playlist.description}
+                      onChange={handleChange}
+                      required
+                  ></textarea>
+              </div>
+              <button className="btn btn-primary" type="submit">
+                  Submit
+              </button>
+          </form>
+      </div>
+  );
+}

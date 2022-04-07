@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import config from "../../utils/config";
 import { searchTrack } from "../../utils/fetchApi";
 
 export default function SearchBar({ onSuccess, onClearSearch }) {
@@ -36,7 +35,7 @@ const clearSearch = () => {
           <input
             type="text"
             name="query"
-            placeholder="Search..."
+            placeholder="Search track..."
             onChange={handleInput}
             required
             value={text}
