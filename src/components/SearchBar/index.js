@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { searchTrack } from "../../utils/fetchApi";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { searchTrack } from '../../utils/fetchApi';
 
 export default function SearchBar({ onSuccess, onClearSearch }) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const accessToken = useSelector((state) => state.auth.accessToken);
 
   const handleInput = (e) => {
@@ -18,15 +18,15 @@ export default function SearchBar({ onSuccess, onClearSearch }) {
 
       const tracks = responseSearch.tracks.items;
       onSuccess(tracks);
-  } catch (e) {
+    } catch (e) {
       alert(e);
-  }
-};
+    }
+  };
 
-const clearSearch = () => {
-  setText("");
-  onClearSearch();
-};
+  const clearSearch = () => {
+    setText('');
+    onClearSearch();
+  };
 
   return (
     <div className="search-wrapper">
@@ -35,7 +35,7 @@ const clearSearch = () => {
           <input
             type="text"
             name="query"
-            placeholder="Search track..."
+            placeholder="Search tracks..."
             onChange={handleInput}
             required
             value={text}

@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../utils/authSlice";
 
@@ -11,7 +12,7 @@ export default function NavigationBar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <h1>Musify</h1>
+        <h1>HW Playlist</h1>
       </div>
       <div className="navbar-login">
         <button className="btn btn-primary" onClick={handleLogout}>

@@ -1,9 +1,15 @@
-import { useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
-import CreatePlaylist from "./pages/CreatePlaylist";
-import Login from "./pages/Login";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import {
+  Redirect,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+import './App.css';
+import CreatePlaylist from './pages/CreatePlaylist';
+import Login from './pages/Login';
 
 function App() {
   const isAuthorized = useSelector((state) => state.auth.isAuthorized);
