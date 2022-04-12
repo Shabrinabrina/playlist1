@@ -62,6 +62,7 @@ export default function FormPlaylist({ uris }) {
             id="title"
             value={playlist.title}
             onChange={handleChange}
+            placeholder="Your playlist title"
             required
           />
         </div>
@@ -72,6 +73,7 @@ export default function FormPlaylist({ uris }) {
             name="description"
             value={playlist.description}
             onChange={handleChange}
+            placeholder="Playlist description"
             required
           />
         </div>

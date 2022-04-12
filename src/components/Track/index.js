@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Track({
-  url, title, artist, select, toggle,
-}) {
+export default function Track({ url, title, artist, select, toggle }) {
   const [isSelected, setIsSelected] = useState(select);
 
   const handleSelect = () => {
@@ -13,8 +11,10 @@ export default function Track({
   return (
     <div className="card-playlist">
       <img src={url} alt="Track Playlist" />
-      <h3>{title}</h3>
-      <p>{artist}</p>
+      <div className="card-info">
+        <h4>{title}</h4>
+        <p>{artist}</p>
+      </div>
       <button
         className={`btn btn-select ${
           isSelected ? 'btn-primary' : 'btn-secondary'

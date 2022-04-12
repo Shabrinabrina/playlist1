@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  background-color: #FBD6D2;
+  background-color: #121212;
   padding: 10px 20px 20px;
   font-family: "Poppins", sans-serif;
 }
 
 hr {
-  border: 1px solid #f190b7;
+  border: 1px solid #575757;
   margin: 30px 0;
 }
 
@@ -20,9 +20,10 @@ hr {
 .from input,
 textarea {
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #575757;
   padding: 8px 16px;
   font-size: 14px;
+  background-color: #333;
 }
 
 /* Button */
@@ -36,19 +37,17 @@ textarea {
 }
 
 .btn-primary {
-  background-color: #F190B7;
-  color: white;
+  background-color: #1db954;
 }
 
 .btn-secondary {
-  background-color: transparent;
-  border: 1px solid #F190B7;
-  color: #F190B7;
+  background-color: #ffffff;
+  color: #000;
   font-weight: 500;
 }
 
 .btn-text {
-  color: #F190B7;
+  color: #b5b5b5;
   background-color: transparent;
   padding: 0;
   margin: 12px 0;
@@ -98,18 +97,26 @@ textarea {
 /* Card Track Playlist */
 .track-list {
   display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 20px;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   margin: 20px 0;
 }
 
 .card-playlist {
-  width: 250px;
+  width: 200px;
   border-radius: 8px;
-  border: 2px solid #b7cadb;
   padding: 14px;
-  background-color: white;
+  background-color: #201F1F;
+}
+
+.card-playlist:hover {
+  transition: all 0.1s ease-out; 
+  background-color: #282828;
+}
+
+.card-playlist .card-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .card-playlist img {
@@ -118,12 +125,22 @@ textarea {
   border-radius: 8px;
 }
 
-.card-playlist h3 {
-  font-weight: 600;
-  min-height: 58px;
+h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 12px 0;
+}
+
+.card-playlist .card-info p {
+  font-size: 14px;
+  color: #B5B5B5;
+  margin: 0;
 }
 
 .btn-select {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 200px;
 }
