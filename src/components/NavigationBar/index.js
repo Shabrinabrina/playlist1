@@ -1,6 +1,6 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { logout } from "../../utils/authSlice";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../utils/authSlice';
 
 export default function NavigationBar() {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Track from '../../components/Track';
 import SearchBar from '../../components/SearchBar';
-import FormPlaylist from '../../components/FromPlaylist'
+import FormPlaylist from '../../components/FromPlaylist';
 import NavigationBar from '../../components/NavigationBar';
 
 export default function CreatePlaylist() {
