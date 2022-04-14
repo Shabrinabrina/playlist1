@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import config from '../../utils/config';
 import { getUserProfile } from '../../utils/fetchApi';
 import { login } from '../../utils/authSlice';
+import { Anchor } from '@mantine/core';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -44,9 +45,9 @@ export default function Login() {
       <p>
         Before using <b>HW Playlist</b>, please login to Spotify here.
       </p>
-      <a href={getSpotifyLinkAuthorize()} className="btn btn-primary">
+      <Anchor href={getSpotifyLinkAuthorize()} color="green" radius="md" size="md" uppercase>
         Login
-      </a>
+        </Anchor>
     </div>
   );
 }
