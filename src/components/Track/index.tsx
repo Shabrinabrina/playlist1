@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 
-export default function Track({ url, title, artist, select, toggle }) {
-  const [isSelected, setIsSelected] = useState(select);
+interface IProps {
+  url: string;
+  title: string;
+  artist: string;
+  select: boolean;
+  toggle: () => void;
+}
 
-  const handleSelect = () => {
+const Track: React.FC<IProps> = ({ url, title, artist, select, toggle }) => {
+  const [isSelected, setIsSelected] = useState<boolean>(select);
+
+  const handleSelect: () => void = () => {
     setIsSelected(!isSelected);
     toggle();
   };
@@ -25,4 +33,6 @@ export default function Track({ url, title, artist, select, toggle }) {
       </button>
     </div>
   );
-}
+};
+
+export default Track;

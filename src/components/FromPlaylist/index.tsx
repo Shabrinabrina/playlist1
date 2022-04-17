@@ -1,40 +1,45 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { TRootState } from '../../store';
 import { addTracksToPlaylist, createPlaylist } from '../../utils/fetchApi';
 
-export default function FormPlaylist({ uris }) {
-  const [playlist, setPlaylist] = useState({
+interface IProps {
+  uris: string[];
+}
+
+interface IFormState {
+  title: string;
+  description: string;
+}
+
+const FormPlaylist: React.FC<IProps> = ({ uris }) => {
+  const [playlist, setPlaylist] = useState<IFormState>({
     title: '',
     description: '',
   });
-  const accessToken = useSelector((state) => state.auth.accessToken);
-  const userId = useSelector((state) => state.auth.user.id);
+  const accessToken: string = useSelector(
+    (state: TRootState) => state.auth.accessToken
+  );
+  const userId: string = useSelector((state: TRootState) => state.auth.user.id);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent) => {
+    const target = e.target as HTMLTextAreaElement;
+    const { name, value } = target;
 
     setPlaylist({ ...playlist, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (playlist.title.length > 10) {
       try {
-        const responsePlaylist = await createPlaylist(
-          accessToken,
-          userId,
-          {
-            name: playlist.title,
-            description: playlist.description,
-          },
-        );
+        const responsePlaylist = await createPlaylist(accessToken, userId, {
+          name: playlist.title,
+          description: playlist.description,
+        });
 
-        await addTracksToPlaylist(
-          accessToken,
-          responsePlaylist.id,
-          uris,
-        );
+        await addTracksToPlaylist(accessToken, responsePlaylist.id, uris);
 
         setPlaylist({
           title: '',
@@ -51,7 +56,7 @@ export default function FormPlaylist({ uris }) {
   };
 
   return (
-    <div className="form-playlist">
+    <div className="from-playlist">
       <h3>Create Playlist</h3>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -83,4 +88,6 @@ export default function FormPlaylist({ uris }) {
       </form>
     </div>
   );
-}
+};
+
+export default FormPlaylist;
