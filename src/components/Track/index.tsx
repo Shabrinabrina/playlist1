@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 interface IProps {
   url: string;
@@ -17,13 +18,14 @@ const Track: React.FC<IProps> = ({ url, title, artist, select, toggle }) => {
   };
 
   return (
-    <div className="card-playlist">
-      <img src={url} alt="Track Playlist" />
+    <div className="card-track">
+      <img src={url} alt="Track Playlist" aria-label="image-track" />
       <div className="card-info">
-        <h4>{title}</h4>
-        <p>{artist}</p>
+        <h4 aria-label="title-track">{title}</h4>
+        <p aria-label="artist-track">{artist}</p>
       </div>
       <button
+        aria-label="button-track"
         className={`btn btn-select ${
           isSelected ? 'btn-primary' : 'btn-secondary'
         }`}

@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.App {
+  text-align: center;
+}
+
 body {
   background-color: #E4E9BE;
   padding: 10px 20px 20px;
-  font-family: "Poppins", sans-serif;
+}
+
+*{
+  font-family: sans-serif;
 }
 
 hr {
@@ -38,12 +44,26 @@ textarea {
 
 .btn-primary {
   background-color: #A2B38B;
+  color: white;
+}
+
+.btn-login {
+  background-color: #A2B38B;
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+.login-wrapper, p{
+  text-align: center;
 }
 
 .btn-secondary {
   background-color: #ffffff;
-  color: #000;
+  color: #F10086;
   font-weight: 500;
+  border: 1px solid #5b7db1;
 }
 
 .btn-text {
@@ -51,6 +71,11 @@ textarea {
   background-color: transparent;
   padding: 0;
   margin: 12px 0;
+}
+
+hr {
+  border: 1px solid #A2B38B;
+  margin: 30px 0;
 }
 
 /* Form Create Playlist */
@@ -102,24 +127,24 @@ textarea {
   margin: 20px 0;
 }
 
-.card-playlist {
+.card-track {
   width: 200px;
   border-radius: 8px;
   padding: 14px;
-  background-color: #201F1F;
+  background-color: #000;
 }
 
-.card-playlist:hover {
+.card-track:hover {
   transition: all 0.1s ease-out; 
-  background-color: #FDF6EC;
+  background-color: #FAFDD6;
 }
 
-.card-playlist .card-info {
+.card-track .card-info {
   display: flex;
   flex-direction: column;
 }
 
-.card-playlist img {
+.card-track img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -134,13 +159,13 @@ h4 {
   margin: 12px 0;
 }
 
-.card-playlist .card-info p {
+.card-track .card-info p {
   font-size: 14px;
-  color: #EFFFFD;
+  color: #F10086;
   margin: 0;
 }
 
 .btn-select {
   width: 100%;
-  margin-top: 200px;
+  margin-top: 20px;
 }

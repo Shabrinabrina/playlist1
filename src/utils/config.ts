@@ -8,7 +8,7 @@ interface IConfig {
 }
 
 const config: IConfig = {
-  API_URL: process.env.REACT_APP_API_KEY,
+  API_URL: process.env.REACT_APP_CLIENT_ID,
   SPOTIFY_AUTH_URL: 'https://accounts.spotify.com/authorize',
   SPOTIFY_BASE_URL: 'https://api.spotify.com/v1',
   SPOTIFY_SCOPE: 'playlist-modify-private',

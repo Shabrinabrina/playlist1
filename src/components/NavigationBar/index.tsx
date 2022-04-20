@@ -1,9 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../redux/store';
 import { logout } from '../../redux/authSlice';
 
 const NavigationBar: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleLogout: () => void = () => {
     dispatch(logout());
@@ -12,7 +12,7 @@ const NavigationBar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <h1>Musify</h1>
+        <h1>HW Playlist</h1>
       </div>
       <div className="navbar-login">
         <button className="btn btn-primary" onClick={handleLogout}>

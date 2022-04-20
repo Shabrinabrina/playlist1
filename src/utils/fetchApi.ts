@@ -34,7 +34,7 @@ export const getUserProfile = async (accessToken: string) => {
 
 export const createPlaylist = async (
   accessToken: string,
-  userId: string,
+  userId: string | undefined,
   { name, description }: { name: string; description: string }
 ) => {
   const data = JSON.stringify({

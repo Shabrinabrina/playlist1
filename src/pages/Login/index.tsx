@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import config from '../../utils/config';
 import { getUserProfile } from '../../utils/fetchApi';
+import { useHistory } from 'react-router-dom';
 import { login } from '../../redux/authSlice';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import React from 'react';
 
 const Login: React.FC = () => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ const Login: React.FC = () => {
   return (
     <div className="login-wrapper">
       <p>
-        Before using <b>HW Playlist</b>, please login to Spotify here.
+        Before using <b>Spotify App</b>, please login to Spotify here.
       </p>
       <a href={getSpotifyLinkAuthorize()} className="btn btn-primary">
         LOGIN
