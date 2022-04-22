@@ -1,3 +1,10 @@
+const getHost: () => string = () => {
+  const protocol: string = window.location.protocol;
+  const host: string = window.location.host;
+
+  return `${protocol}//${host}`;
+};
+
 interface IConfig {
   API_URL: string | undefined;
   SPOTIFY_AUTH_URL: string;
