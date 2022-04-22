@@ -73,3 +73,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 README PLAYLIST APP
 
 # Playlist1 App
+
+Playlist1 App adalah aplikasi pertama berbasis web menggunakan React Library. Aplikasi ini dibuat untuk kalian para pecinta musik dari semua genre. Anda dapat membuat playlist anda sendiri sesuai dengan lagu-lagu favorite anda dengan mudah dan akan tampil dengan sendirinya.
+
+# Installation
+
+
+
+## Usage
+
+# 1 Akses aplikasi Platlist1 App dengan mengklik link berikut: 
+# 2 Email (gigih2frontend@gmail.com) sudah di tambahkan dan diberi aksess untuk login dengan email
+# 3 klik tombol login pada tampilan awal di bawah tulisan "Before using Spotify App, please login to Spotify here."
+# 4 setelah login anda akan berada di tampilan create playlist
+# 5 jika ingin membuat playlist baru, ada bisa mengisi title, deskripsi sesuai dengan yg ada mau pada halaman create playlist. search artis dari lau anda dan klik "select" untuk menambahkan dan klik "diselect" untuk membatalkan
+# 6 setelah sukses membuat daftar playlist, anda dapat mengecek playlist tersebut du aplikasi Spotify yang ada di handphone/laptop
+
+
+### Contributing
+# 1 akun email gigih telah di tambahkan dan diberi akses untuk bisa login
+# 2 pada halaman web saya telah buat semenatik mungkin agar mudah digunakan
+# 3 pennguna user dapat memebuat playlist merka sendiri dengan mudah
+# 4 saya juga telah melakukan testing menggunakan MSW untuk mock API async call
+# 5 Saya juga telah melakukan semua problem statement dan technical requirements 
