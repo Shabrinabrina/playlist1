@@ -26,7 +26,7 @@ hr {
 .from input,
 textarea {
   border-radius: 5px;
-  border: 1px solid #FDF6EC;
+  border: 1px solid ##F10086;
   padding: 8px 16px;
   font-size: 14px;
   background-color: #fff;
@@ -57,6 +57,7 @@ textarea {
 
 .login-wrapper, p{
   text-align: center;
+  color: #F10086;
 }
 
 .btn-secondary {
